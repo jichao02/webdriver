@@ -7,6 +7,7 @@ from common.Driver import startUp
 import unittest
 import time
 from common.MyTest import MyTest
+from common.readData import readExcel
 class HomTest(MyTest):
     def test_weiToutiao(self):
         self.driver.find_element_by_id('com.ss.android.article.news:id/bth').click()
@@ -19,6 +20,11 @@ class HomTest(MyTest):
         time.sleep(3)
         self.assertEqual()
     def test_search(self):
+        re = readExcel()
+        # 获取当前的类名和方法名
+        Classname = self.__class__.__name__
+        Methodname = self._testMethodName
+
         self.driver.find_element_by_id('com.ss.android.article.news:id/bt5').click()
         time.sleep(3)
         self.driver.find_element_by_id('com.ss.android.article.news:id/bt5').send_keys('大赢家')
