@@ -18,7 +18,7 @@ def startUp():
     }
     driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desire_caps)
     print("----启动成功----")
-    time.sleep(5)
+    time.sleep(10)
     return driver
 if __name__ == '__main__':
     driver = startUp()
