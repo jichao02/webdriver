@@ -11,6 +11,7 @@ class readConfig(object):
     def __init__(self):
         self.config =configparser.ConfigParser()
         self.config.read(new_path,encoding='utf-8')
+    # 获取某个section下面的key和value
     def getemail(self,name):
         value = self.config.get('EMAIL',name)
         return value
