@@ -10,8 +10,6 @@ import unittest
 from common.Driver import startUp
 import time
 class MyTest(unittest.TestCase):
-    driver = None
-
     @classmethod
     def setUpClass(cls) -> None:
         cls.driver = startUp()
@@ -20,8 +18,8 @@ class MyTest(unittest.TestCase):
         time.sleep(5)
     def tearDown(self) -> None:
         self.driver.close_app()
-    @classmethod
-    def tearDownClass(cls) -> None:
-        cls.driver.quit()
+    # @classmethod
+    # def tearDownClass(cls) -> None:
+    #     cls.driver.quit()
 if __name__ == '__main__':
     unittest.main()

@@ -12,9 +12,9 @@ class readConfig(object):
         self.config =configparser.ConfigParser()
         self.config.read(new_path,encoding='utf-8')
     # 获取某个section下面的key和value
-    def getemail(self,name):
+    def getEmail(self,name):
         value = self.config.get('EMAIL',name)
         return value
 if __name__ == '__main__':
     readconfig = readConfig()
-    print("邮箱的名字是：",readconfig.getemail('mail_user'))
+    print("邮箱的名字是：",readconfig.getEmail('mail_user'))
